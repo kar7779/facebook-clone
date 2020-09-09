@@ -1,0 +1,20 @@
+.posts {
+  border: 1px solid lightgray;
+  margin-bottom: 30px;
+}
+
+.posthead {
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+  margin-left: 10px;
+  padding-bottom: 10px;
+}
+.posts img {
+  width: 100%;
+  padding-bottom: 50px;
+}
+.posthead h4 {
+  margin-left: 10px;
+  color: rgb(88, 88, 255);
+}

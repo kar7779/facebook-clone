@@ -1,0 +1,21 @@
+.imgcard img {
+  max-width: 200px;
+  height: 40vh;
+  padding: 10px;
+  border-radius: 20px;
+  object-fit: cover;
+  overflow: hidden;
+  /* transition: transform 0.5s ease; */
+}
+.imgcard {
+  position: relative;
+  transition: transform 0.5s ease;
+}
+.imgcard:hover {
+  transform: scale(1.1);
+}
+.head {
+  position: absolute;
+  top: 50px;
+  padding-left: 20px;
+}

@@ -1,0 +1,48 @@
+.Main {
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.head {
+  position: absolute;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+}
+.imagenav {
+  display: flex;
+}
+.createpost {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(233, 237, 240);
+  width: 90%;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.searchbox {
+  border-radius: 5px;
+  padding-left: 10px;
+  background-color: rgb(207, 217, 226);
+  width: 100%;
+}
+.btn {
+  width: 100%;
+}
+span input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  outline: none;
+  background: white;
+  cursor: inherit;
+  display: block;
+}
+.postss {
+  max-width: 800px;
+  max-height: 1200px;
+  width: 70%;
+  margin: 50px auto;
+}
