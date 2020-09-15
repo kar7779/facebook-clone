@@ -17,3 +17,9 @@ h2 {
 h3 > * {
   margin: 20px;
 }
+
+@media only screen and (max-width: 600px) {
+  .Home {
+    display: none;
+  }
+}

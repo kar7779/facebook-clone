@@ -49,8 +49,23 @@ input {
 .container {
   display: flex;
 }
-.Nav > Button:focus-within {
-  border-bottom: 5px solid blue;
-  overflow: hidden;
-  background-color: none;
+.Nav > button {
+  color: gray;
+}
+button:focus-within {
+  color: #1877f2;
+}
+.Nav button:focus-within {
+  border-bottom: 5px solid #1877f2;
+}
+.Nav Button > *:hover {
+  color: #1877f2;
+}
+@media only screen and (max-width: 600px) {
+  .Nav > Button {
+    display: none;
+  }
+  .last {
+    display: none;
+  }
 }
