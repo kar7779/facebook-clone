@@ -3,6 +3,7 @@ import App from "./App";
 import { auth } from "./components/firbase";
 import firebase from "firebase";
 import { Button } from "@material-ui/core";
+import "./login.css";
 
 function login() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -11,8 +12,9 @@ function login() {
   useEffect(() => {
     auth.onAuthStateChanged((authuser) => {
       if (authuser) {
-        console.log(authuser.displayName);
+        console.log(authuser);
         setUser(authuser);
+        return authuser;
       } else {
         setUser(null);
       }
@@ -23,7 +25,6 @@ function login() {
     e.preventDefault();
     auth.signInWithPopup(provider).then((authuser) => {
       setUser(authuser.user);
-      console.log(setUser);
     });
   };
 
@@ -39,7 +40,7 @@ function login() {
         </div>
       ) : (
         <>
-          <App userr={user} />
+          <App username={user.displayName} photoURL={user.photoURL} />
         </>
       )}
     </div>

@@ -1,6 +1,6 @@
 .imgcard img {
   width: 90%;
-  height: 40vh;
+  height: 38vh;
   padding: 10px;
   border-radius: 20px;
   object-fit: cover;
@@ -14,6 +14,10 @@
 }
 .imgcard:hover {
   transform: scale(1.07);
+}
+.imgcard img {
+  width: 100%;
+  max-width: 200px;
 }
 .head {
   position: absolute;

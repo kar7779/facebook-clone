@@ -1,0 +1,48 @@
+.message_buttons {
+  display: flex;
+}
+
+.option {
+  display: flex;
+  padding-right: 30px;
+  padding-top: 30px;
+}
+.main_message {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+.messagebox {
+  background-color: white;
+  box-shadow: 0px 5px 7px -7px rgba(0, 0, 0, 0.75);
+  border-radius: 15px;
+  width: 100%;
+}
+
+.main_message button {
+  display: none;
+}
+
+.main_message .txt {
+  outline: none;
+  border: none;
+  border-radius: 40px;
+  height: 60px;
+  background-color: #cfd9e2;
+  text-align: center;
+  margin-left: 30px;
+  width: 300px;
+}
+.main_message .imgg {
+  outline: none;
+  border: none;
+  border-radius: 40px;
+  height: 60px;
+  background-color: #cfd9e2;
+  text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  .main_message .txt {
+    width: 150px;
+  }
+}

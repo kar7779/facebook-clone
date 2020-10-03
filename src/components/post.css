@@ -1,25 +1,45 @@
 .posts {
-  border: 1px solid lightgray;
+  border-radius: 1px;
+  background-color: white;
   margin-bottom: 30px;
-  box-shadow: 3px 3px 3px 3px rgba(0, 0, 255, 0.2);
+  box-shadow: 0px 5px 7px -7px rgba(0, 0, 0, 0.75);
 }
 
-.posthead {
-  display: flex;
-  align-items: center;
-  padding-top: 20px;
-  margin-left: 10px;
-  padding-bottom: 10px;
-}
-.posts img {
-  width: 100%;
-  padding-bottom: 50px;
-}
-.posthead h4 {
+.profile h4 {
   margin-left: 10px;
   color: rgb(88, 88, 255);
 }
+
 .postbtn button {
   margin: 33px;
   text-align: center;
+  cursor: pointer;
+}
+
+.posts h3 {
+  margin-top: 10px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  margin: 10px 0px 10px 10px;
+  padding-top: 10px;
+}
+.posts img {
+  width: 100%;
+  max-height: 500px;
+}
+.protxt p {
+  margin-left: 10px;
+}
+
+@media (max-width: 620px) {
+  .postbtn {
+    display: flex;
+    justify-content: space-around;
+  }
+  .posts h3 {
+    width: 500px;
+  }
 }

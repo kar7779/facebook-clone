@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import SearchIcon from "@material-ui/icons/Search";
 import NotificationsNoneIcon from "@material-ui/icons/NotificationsNone";
@@ -13,8 +13,9 @@ import { InputBase } from "@material-ui/core";
 import Aside from "./components/Aside";
 import Main from "./components/Main";
 import { auth } from "./components/firbase";
+import Embedpost from "./components/Embedpost";
 
-function App({ userr }) {
+function App({ photoURL, username }) {
   return (
     <div className="App">
       {/* //App logo */}
@@ -27,7 +28,7 @@ function App({ userr }) {
           />
           <div className="icons">
             <SearchIcon />
-            <InputBase placeholder="Search Facebook" />
+            <InputBase className="inpt" placeholder="Search Facebook" />
           </div>
         </div>
         <div className="Nav">
@@ -40,9 +41,7 @@ function App({ userr }) {
           <Button>
             <OndemandVideoOutlinedIcon className="Muiicons" />
           </Button>
-          <Button>
-            <Avatar className="icon" src={userr} alt={userr} />
-          </Button>
+
           <Button>
             <StorefrontOutlinedIcon className="Muiicons" />
           </Button>
@@ -51,13 +50,20 @@ function App({ userr }) {
           </Button>
         </div>
         <div className="last">
+          <Button>
+            <Avatar className="icon" src={photoURL} />
+            <h3>{username}</h3>
+          </Button>
           <SettingsOutlinedIcon />
-          <Button onClick={() => auth.signOut()}>logout</Button>
+          <Button className="logout" onClick={() => auth.signOut()}>
+            logout
+          </Button>
         </div>
       </div>
       <div className="container">
-        <Aside username="karthik" />
-        <Main />
+        <Aside username={username} photo={photoURL} />
+        <Main photo={photoURL} username={username} />
+        <Embedpost />
       </div>
     </div>
   );

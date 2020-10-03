@@ -4,17 +4,20 @@ import ThumbUpAltOutlinedIcon from "@material-ui/icons/ThumbUpAltOutlined";
 import ChatBubbleOutlineOutlinedIcon from "@material-ui/icons/ChatBubbleOutlineOutlined";
 import TelegramIcon from "@material-ui/icons/Telegram";
 import "./post.css";
-
-function Posts({ username, ImageUrl }) {
+function Posts({ username, ImageUrl, propic, message, timestamp }) {
   return (
     <div className="posts">
-      <div className="posthead">
-        <Avatar src="#" alt={username} />
-        <h4>{username}</h4>
+      <div className="profile">
+        <Avatar src={propic} alt="Karthik" />
+        <div className="protxt">
+          <h4>{username}</h4>
+          <p>{new Date(timestamp?.toDate()).toUTCString()}</p>
+        </div>
       </div>
-      <img src={ImageUrl} alt="" />
+      <img className="postimgs" src={ImageUrl} alt="" />
       <h3>
-        <strong>{username}</strong>Helllo
+        <strong>{username}</strong>
+        {message}
       </h3>
       <div className="postbtn">
         <Button>

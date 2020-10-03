@@ -1,13 +1,12 @@
-.header {
-  display: flex;
-  align-items: center;
-  padding: 30px;
+.Home {
+  margin-top: 0px;
+  margin-right: 60px;
 }
 h2 {
   margin-right: 50px;
 }
 .headd {
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 .headd > * {
@@ -16,6 +15,10 @@ h2 {
 }
 h3 > * {
   margin: 20px;
+}
+h3:hover {
+  background-color: rgba(189, 189, 189, 0.856);
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 600px) {

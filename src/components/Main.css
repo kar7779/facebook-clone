@@ -10,6 +10,10 @@
 }
 .imagenav {
   display: flex;
+  margin-top: 20px;
+}
+.imagenav image {
+  width: 30%;
 }
 .createpost {
   display: flex;
@@ -42,7 +46,11 @@ span input {
 }
 .postss {
   max-width: 800px;
-  max-height: 1200px;
   width: 70%;
   margin: 50px auto;
+}
+@media (max-width: 620px) {
+  .postss {
+    max-width: 500px;
+  }
 }
